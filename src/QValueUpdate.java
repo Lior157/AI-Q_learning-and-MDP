@@ -14,7 +14,7 @@ public class QValueUpdate {
 
         // TODO: Explore: choose a random action with epsilon probability
         Random rand = new Random();
-        boolean exploration = epsilon <= rand.nextDouble() ;
+        boolean exploration = epsilon >= rand.nextDouble() ;
         List<CoffeeWorldAction>  ls = environment.getLegalActions(state);
         CoffeeWorldAction randomCoffeeAction = ls.get((int)(rand.nextDouble()*ls.size()));
         // TODO: Exploit: get the best (highest Q value) action legal in this state
